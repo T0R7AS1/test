@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
                 username.setError(null);
                 password.setError(null);
                 if(!Validation.isValidUsername(username.getText().toString())){
-                    username.setError("Klaida! Patikrinkite slapyvardi!");
+                    username.setError("Klaida! Patikrinkite ivesta varda!");
                     username.requestFocus();
                 }
                 else if(!Validation.isValidPassword(password.getText().toString())){
-                    password.setError("Klaida! Patikrinkite slaptazodi!");
+                    password.setError("Klaida! Patikrinkite ivesta slaptazodi!");
                     password.requestFocus();
                 }
                 else {

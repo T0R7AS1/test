@@ -30,21 +30,31 @@ public class RegisterActivity extends AppCompatActivity {
                 email.setError(null);
                 password.setError(null);
                 if(!Validation.isValidUsername(username.getText().toString())) {
-                    username.setError("Klaida! Patikrinkite slapyvardi!");
+                    username.setError("Klaida! Patikrinkite ivesta varda!");
                     username.requestFocus();
                 }
                 else if (!Validation.isValidEmail(email.getText().toString())){
-                    email.setError("Klaida! Patikrinkite el. pasta!");
+                    email.setError("Klaida! Patikrinkite ivesta el. pasta!");
                     email.requestFocus();
                 }
                 else if(!Validation.isValidPassword(password.getText().toString())){
-                    password.setError("Klaida! Patikrinkite slaptazodi!");
+                    password.setError("Klaida! Patikrinkite ivesta slaptazodi!");
                     password.requestFocus();
                 }
                 else{
                     Intent GotoLoginActivity = new Intent(RegisterActivity.this, MainActivity.class);
                     startActivity(GotoLoginActivity);
                 }
+
+            }
+        });
+        Button back = findViewById(R.id.back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent GotoLoginActivity = new Intent(RegisterActivity.this, MainActivity.class);
+                startActivity(GotoLoginActivity);
             }
         });
     }

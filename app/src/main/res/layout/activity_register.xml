@@ -68,4 +68,12 @@
         android:background="@color/button"
         android:id="@+id/final_register_button"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no"
+        android:background="@color/button"
+        android:layout_marginTop="20dp"
+        android:id="@+id/back"
+        />
 </LinearLayout>
